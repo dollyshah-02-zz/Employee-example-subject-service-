@@ -1,0 +1,18 @@
+<h3>Employee Form</h3>
+<form>
+  Id: <input type="text" name="empid" [(ngModel)]='emp.id'><br /><br/>
+  First Name: <input type="text" name="fname" [(ngModel)]='emp.first_name'><br /><br/>
+  Last Name: <input type="text" name="lname" [(ngModel)]='emp.last_name'><br /><br/>
+  Gender: <input type="radio" name="gender" value="male" [(ngModel)]='emp.gender'>Male
+          <input type="radio" name="gender"value="female" [(ngModel)]='emp.gender'> Female<br/><br/>
+  Department: <select name="dept" id="" [(ngModel)]="emp.department">
+        <option *ngFor='let value of deptArray' value={{value.dept}}>{{value.dept}}</option>
+        
+  </select><br/><br/>
+  <button (click)='createEmp()'>SUBMIT</button>
+  <!-- <button (click)="showData()">Show data</button> -->
+
+</form>
+<app-pm-table></app-pm-table>
+<app-marketing-table></app-marketing-table>
+<app-developer-table></app-developer-table>

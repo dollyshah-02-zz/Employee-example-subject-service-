@@ -1,0 +1,5 @@
+export enum Department {
+    PROJECTMANAGER,
+    SOFTWAREDEVELOPER,
+    MARKETINGMANAGER
+}
